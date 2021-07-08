@@ -1,5 +1,5 @@
 puts "um ano tem "+ (365*24).to_s+" horas"
 puts "uma decada tem "+(10*365*24*60).to_s+" minutos"
 puts "eu tenho "+ (20*365*24*60*60).to_s+" segundos de vida"
-puts "eu pretendo comer "+(50*80).to_s+" chocolates durante a minha vida xd"
-puts "se a sua idadde é 1232 milhoes de segundos, voce tem "+((((1232000000.0/60)/60)/24)/365).to_s+" anos de vida"
+puts "eu pretendo comer "+(150*80).to_s+" chocolates durante a minha vida xd"
+puts "se a sua idade é 1232 milhoes de segundos, voce tem "+((((1232000000.0/60)/60)/24)/365).to_s+" anos de vida"
