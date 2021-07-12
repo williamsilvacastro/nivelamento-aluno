@@ -9,7 +9,7 @@ def calc_area(raio)
     return raio**2 *Math::PI
 end
 
-puts "se o raio de um circulo é "+raio.to_s
-puts " logo seu diametro é "+calc_diametro(raio).to_s
-puts ", seu comprimento é "+calc_comprimento(raio).to_s
-puts " e a sua area é "+calc_area(raio).to_s
+puts "se o raio de um circulo é :"+raio.to_s
+puts "seu diametro é :"+calc_diametro(raio).to_s
+puts "seu comprimento é :"+calc_comprimento(raio).to_s
+puts "sua area é :"+calc_area(raio).to_s
