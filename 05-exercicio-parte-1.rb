@@ -10,9 +10,9 @@ end
 print "qual o valor do raio:"
 raio = gets.to_f 
 puts "se o raio de um circulo é :"+raio.to_s
-puts "seu diametro é :"+calc_diametro(raio).to_s
-puts "seu comprimento é :"+calc_comprimento(raio).to_s
-puts "sua area é :"+calc_area(raio).to_s
+puts "seu diametro é :"+calc_diametro(raio).round(2).to_s
+puts "seu comprimento é :"+calc_comprimento(raio).round(2).to_s
+puts "sua area é :"+calc_area(raio).round(2).to_s
 
 # Exercicio 05
 # Parte 1:
