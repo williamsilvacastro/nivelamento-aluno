@@ -42,19 +42,15 @@ def fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_lei
         return "VERDE"
     end
 end
-puts fase_pandemica(0.1, 0.7, 0.5)#verde
-puts fase_pandemica(0.1, 0.7, 0.51)#amarela
-puts fase_pandemica(0.1, 0.7, 0.65)#laranja
-puts fase_pandemica(0.1, 0.7, 0.8)#vermelha
-puts fase_pandemica(0.1, 0.7, 0.91)#roxa
+# puts fase_pandemica(0.1, 0.7, 0.5)#verde
+# puts fase_pandemica(0.1, 0.7, 0.51)#amarela
+# puts fase_pandemica(0.1, 0.7, 0.65)#laranja
+# puts fase_pandemica(0.1, 0.7, 0.8)#vermelha
+# puts fase_pandemica(0.1, 0.7, 0.91)#roxa
 
 
 def validacao_entradas(entrada)
-    if entrada.class != Float && taxa_de_vacinacao <=1 && taxa_de_vacinacao >= 0
-        return false
-    else
-        return true
-    end
+    return (entrada <= 1 && entrada >= 0)
 end
 
 puts "qual a taxa de vacinacão?"
@@ -71,11 +67,11 @@ if validacao_entradas(taxa_de_vacinacao)
             puts "valor da taxa ocupação de leitos informado com sucesso"
             puts "a situação atual está "+fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_leitos)
         else
-            puts "valor invalido"
+            puts "valor invalido, o programa se encerrará"
         end
     else
-        puts "valor invalido"
+        puts "valor invalido, o programa se encerrará"
     end
 else
-    puts "valor invalido"
+    puts "valor invalido, o programa se encerrará"
 end
