@@ -63,7 +63,7 @@ def validacao_entradas(entrada)
 end
 
 puts "qual a taxa de vacinacão?"
-taxa_de_vacinacao = gets.chomp.to_f
+taxa_de_vacinacao = gets.to_f
 if validacao_entradas(taxa_de_vacinacao)=="valor valido"
     puts "valor da taxa de vacinacão informado com sucesso"
     puts "qual o fator de transmissão?"
