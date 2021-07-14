@@ -52,9 +52,9 @@ end
 def validacao_entradas(entrada)
     if(entrada.class != Float)
         return "valor digitado não é float"
-    elsif !(entrada <= 1)
+    elsif !(entrada < 1)
         return "valor digitado é maior que 1"
-    elsif !(entrada >= 0)
+    elsif !(entrada > 0)
         return "valor digitado é maior que 0"
     else
         return "valor valido"
@@ -63,7 +63,7 @@ def validacao_entradas(entrada)
 end
 
 puts "qual a taxa de vacinacão?"
-taxa_de_vacinacao = gets.to_f
+taxa_de_vacinacao = gets.chomp.to_f
 if validacao_entradas(taxa_de_vacinacao)=="valor valido"
     puts "valor da taxa de vacinacão informado com sucesso"
     puts "qual o fator de transmissão?"
@@ -76,11 +76,11 @@ if validacao_entradas(taxa_de_vacinacao)=="valor valido"
             puts "valor da taxa ocupação de leitos informado com sucesso"
             puts "a situação atual está "+fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_leitos)
         else
-            puts validacao_entradas(taxa_de_vacinacao) +" o programa se encerrará"
+            puts validacao_entradas(taxa_ocupacao_de_leitos) +" o programa se encerrará"
         end
     else
         puts validacao_entradas(fator_de_transmissao) +" o programa se encerrará"
     end
 else
-    puts validacao_entradas(taxa_ocupacao_de_leitos) +" o programa se encerrará"
+    puts validacao_entradas(taxa_de_vacinacao) +" o programa se encerrará"
 end
