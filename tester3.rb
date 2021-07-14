@@ -59,6 +59,10 @@ def validacao_entradas(entrada)
     else
         return "valor valido"
     end
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 189bb723cd038e69937fcd0cbae99cc34bff223c
 end
 
 puts "qual a taxa de vacinacão?"
@@ -75,11 +79,19 @@ if validacao_entradas(taxa_de_vacinacao)=="valor valido"
             puts "valor da taxa ocupação de leitos informado com sucesso"
             puts "a situação atual está "+fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_leitos)
         else
+<<<<<<< HEAD
             puts validacao_entradas(taxa_de_vacinacao) +" o programa se encerrará"
+=======
+            puts validacao_entradas(taxa_ocupacao_de_leitos) +" o programa se encerrará"
+>>>>>>> 189bb723cd038e69937fcd0cbae99cc34bff223c
         end
     else
         puts validacao_entradas(fator_de_transmissao) +" o programa se encerrará"
     end
 else
+<<<<<<< HEAD
     puts validacao_entradas(taxa_ocupacao_de_leitos) +" o programa se encerrará"
+=======
+    puts validacao_entradas(taxa_de_vacinacao) +" o programa se encerrará"
+>>>>>>> 189bb723cd038e69937fcd0cbae99cc34bff223c
 end
