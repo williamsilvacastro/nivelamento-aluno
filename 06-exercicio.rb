@@ -29,7 +29,7 @@ def fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_lei
         elsif taxa_ocupacao_de_leitos > 0.9
             #fase roxa
             return "ROXA"
-        elsif taxa_ocupacao_de_leitos >= 0.80 || fator_de_transmissao >= 1
+        elsif taxa_ocupacao_de_leitos > 0.80 || fator_de_transmissao >= 1
             #fase vermelha
             return "VERMELHA"
         elsif taxa_ocupacao_de_leitos >= 0.65 && fator_de_transmissao < 1
