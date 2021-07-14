@@ -22,24 +22,37 @@
 # Obs. 2: escreva testes para demonstrar que o sistema está funcionando.
 
 def fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_leitos)
-    if taxa_de_vacinacao > 0.8
-        #fase azul
-        return "AZUL"
-    elsif taxa_ocupacao_de_leitos > 0.9
-        #fase roxa
-        return "ROXA"
-    elsif taxa_ocupacao_de_leitos >= 0.80 || fator_de_transmissao >= 1
-        #fase vermelha
-        return "vermelha"
-    elsif taxa_ocupacao_de_leitos >= 0.65 && fator_de_transmissao < 1
-        #fase laranja
-        return "LARANJA"
-    elsif taxa_ocupacao_de_leitos > 0.5 && fator_de_transmissao < 1
-        #fase amarela
-        return "AMARELA"
-    elsif taxa_ocupacao_de_leitos <= 0.5 && fator_de_transmissao < 1
-        #fase verde
-        return "VERDE"
+    if validacao_entradas(taxa_de_vacinacao) && validacao_entradas(fator_de_transmissao)&& validacao_entradas(taxa_ocupacao_de_leitos)
+        if taxa_de_vacinacao > 0.8
+            #fase azul
+            return "AZUL"
+        elsif taxa_ocupacao_de_leitos > 0.9
+            #fase roxa
+            return "ROXA"
+        elsif taxa_ocupacao_de_leitos >= 0.80 || fator_de_transmissao >= 1
+            #fase vermelha
+            return "VERMELHA"
+        elsif taxa_ocupacao_de_leitos >= 0.65 && fator_de_transmissao < 1
+            #fase laranja
+            return "LARANJA"
+        elsif taxa_ocupacao_de_leitos > 0.5 && fator_de_transmissao < 1
+            #fase amarela
+            return "AMARELA"
+        elsif taxa_ocupacao_de_leitos <= 0.5 && fator_de_transmissao < 1
+            #fase verde
+            return "VERDE"
+        end
+    else
+        return "ERRO"
+    end
+
+end
+
+def validacao_entradas(entrada)
+    if(entrada.class != Float)||!(entrada > 0)||!(entrada < 1)
+        return false
+    else
+        return true
     end
 end
 # puts fase_pandemica(0.1, 0.7, 0.5)#verde
@@ -48,39 +61,30 @@ end
 # puts fase_pandemica(0.1, 0.7, 0.8)#vermelha
 # puts fase_pandemica(0.1, 0.7, 0.91)#roxa
 
-
-def validacao_entradas(entrada)
-    if(entrada.class != Float)
-        return "valor digitado não é float"
-    elsif !(entrada <= 1)
-        return "valor digitado é maior que 1"
-    elsif !(entrada >= 0)
-        return "valor digitado é maior que 0"
+puts "qual a taxa de vacinacão?"
+taxa_de_vacinacao = gets.to_f
+if !validacao_entradas(taxa_de_vacinacao)
+    puts "valor da taxa de vacinacao preenchido errado"
+    puts "o programa será encerrado"
+else
+    puts "qual o fator de transmissão?"
+    fator_de_transmissao = gets.to_f
+    if !validacao_entradas(fator_de_transmissao)
+        puts "valor do fator de transmissão preenchido errado"
+        puts "o programa será encerrado"
     else
-        return "valor valido"
+        puts "qual a taxa de ocupacão de leitos?"
+        taxa_ocupacao_de_leitos = gets.to_f
+        if !validacao_entradas(taxa_ocupacao_de_leitos)
+            puts "valor da taxa de ocupacao de leitos preenchido errado"
+            puts "o programa será encerrado"
+        else
+            if fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_leitos)!="ERRO"
+                puts "a fase da pandeemia atual é "+ fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_leitos)
+            end
+        end
+        
     end
     
 end
 
-puts "qual a taxa de vacinacão?"
-taxa_de_vacinacao = gets.to_f
-if validacao_entradas(taxa_de_vacinacao)=="valor valido"
-    puts "valor da taxa de vacinacão informado com sucesso"
-    puts "qual o fator de transmissão?"
-    fator_de_transmissao = gets.to_f
-    if validacao_entradas(fator_de_transmissao)=="valor valido"
-        puts "valor da fator de transmissão informado com sucesso"
-        puts "qual a taxa de ocupacão de leitos?"
-        taxa_ocupacao_de_leitos = gets.to_f
-        if validacao_entradas(taxa_ocupacao_de_leitos)=="valor valido"
-            puts "valor da taxa ocupação de leitos informado com sucesso"
-            puts "a situação atual está "+fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_de_leitos)
-        else
-            puts validacao_entradas(taxa_de_vacinacao) +" o programa se encerrará"
-        end
-    else
-        puts validacao_entradas(fator_de_transmissao) +" o programa se encerrará"
-    end
-else
-    puts validacao_entradas(taxa_ocupacao_de_leitos) +" o programa se encerrará"
-end
