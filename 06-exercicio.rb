@@ -50,7 +50,7 @@ end
 
 
 def validacao_entradas(entrada)
-    return (entrada <= 1 && entrada >= 0)
+    return (entrada <= 1 && entrada >= 0)&&(entrada.class == Float)
 end
 
 puts "qual a taxa de vacinacão?"
