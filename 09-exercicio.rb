@@ -13,6 +13,7 @@ while n<1
         puts "valor invalido, tente novamente"
     elsif chute.to_i==numero
         puts "voce acertou!"
+        puts "quantidade de tetativas="+tentativas.to_s
         n=n+1
     elsif chute.to_i>=100 
         puts "o valor digitado é maior que 100, tente novamente"
