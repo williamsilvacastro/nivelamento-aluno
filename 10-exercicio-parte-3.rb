@@ -15,11 +15,7 @@ end
 
 
 while aux<=base
-    if(espacos>=0)
-        puts (" "*espacos)+"*"*aux
-    else
-        puts "*"*aux
-    end
+    puts (" "*espacos)+"*"*aux
     aux+=2
     espacos=espacos-1
 end
