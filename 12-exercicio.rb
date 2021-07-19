@@ -13,8 +13,8 @@ def insere_no_array(array, valor, posicao)
 end
 puts "qual o tamanho do vetor que eu devo gerar?"
 tamanho=gets.chomp.to_i
-vetor = [rand(1..10)]
-for aux in (1..tamanho-1)
+vetor = []
+for aux in (1..tamanho)
     vetor[vetor.size]= rand(0..10)    
 end
 print vetor
