@@ -11,7 +11,12 @@ def insere_no_array(array, valor, posicao)
         return false
     end
 end
-vetor = [rand(0..10), rand(0..10), rand(0..10), rand(0..10), rand(0..10)]
+puts "qual o tamanho do vetor que eu devo gerar?"
+tamanho=gets.chomp.to_i
+vetor = [rand(1..10)]
+for aux in (1..tamanho-1)
+    vetor[vetor.size]= rand(0..10)    
+end
 print vetor
 puts
 puts "digite o valor que deseja colocar no array"
