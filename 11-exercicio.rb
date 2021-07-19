@@ -9,7 +9,8 @@ def posicao_no_array(array, elemento)
     return -1
 end
 vetor = [rand(0..10), rand(0..10), rand(0..10), rand(0..10), rand(0..10)]
-puts vetor
+print vetor
+puts
 puts "qual o elemento que deseja procurar no array?"
 elemento = gets.chomp.to_i
 if posicao_no_array(vetor, elemento)!=-1
