@@ -1,7 +1,7 @@
 def insere_no_array(array, valor, posicao)
     if(posicao<=array.size-1)
         aux=array.size-1
-        while aux>posicao
+        while aux>=posicao
             array[aux+1]=array[aux]
             aux=aux-1
         end
