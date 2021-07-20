@@ -29,6 +29,14 @@ print vetor
 puts
 puts "digite o a posição que deseja tirar o valor no array"
 posicao=gets.chomp.to_i
+aux = vetor
 vetor= remove_da_posicao(vetor, posicao)
-print vetor
-puts
+if aux!=vetor
+    puts "valor inserido com sucesso, o vetor ficou assim:"
+    print vetor
+    puts
+else
+    puts "não foi possivel inserir o valor na posição pedida"
+    print vetor
+    puts
+end
