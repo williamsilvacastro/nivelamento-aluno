@@ -1,5 +1,7 @@
 # Exercicio 13
-# Fazer uma função chamada 'remove_da_posicao' que recebe um array e a posição alvo como parâmetros e que deve retornar um novo array sem o elemento da posição alvo que estava no array informado. Se a posição alvo estiver fora do limite do array e apontar para o primeiro ou último elemento, a função retorna o array inteiro.
+# Fazer uma função chamada 'remove_da_posicao' que recebe um array e a posição alvo como parâmetros e que deve retornar um novo array sem o elemento
+# da posição alvo que estava no array informado. Se a posição alvo estiver fora do limite do array e apontar para o primeiro ou último elemento, 
+# a função retorna o array inteiro.
 # Enviar como 13-exercicio.rb
 
 def remove_da_posicao(array, posicao)
