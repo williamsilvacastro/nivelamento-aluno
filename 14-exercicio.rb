@@ -80,13 +80,21 @@ def existe_no_array(array, valor)
     end
     return false
 end
+def parabenizacao(acertados)
+    if (acertados.size>3)
+        return "parabéns"
+    else
+        return "boa sorte na proxima"
+    end
+end
 def mega_sena()
     sorteados = sortear_numeros(6, 1, 60)
-    apostados = obter_apostas(6, 1, 60)
+    puts "Numeros sorteados: #{sorteados.to_s()}"
+    apostados = obter_apostas(8, 1, 60)
     acertados = verificar_acertos(sorteados, apostados)
     puts "Numeros sorteados: #{sorteados.to_s()}"
     puts "Numeros apostados: #{apostados.to_s()}"
     puts "Acertos: #{acertados.to_s()}"
-    puts "Você acertou #{acertados.size.to_s()} numeros, parabéns"
+    puts "Você acertou #{acertados.size.to_s()} numeros, #{parabenizacao(acertados)}"
 end
 mega_sena()
