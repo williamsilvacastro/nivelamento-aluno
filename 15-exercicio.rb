@@ -32,7 +32,7 @@ def embaralhador(baralho)
     # OBS.: Usar somente funções "raiz" de manipulação de arrays!
     x=0
     baralho_embaralhado=[]
-    while x<53
+    while x<52
         baralho_embaralhado[x]=baralho[gerar_numeros[x]]
         x=x+1
     end
@@ -64,3 +64,4 @@ puts "Baralho ANTES:"
 exibe_array(baralho)
 puts "Baralho DEPOIS:"
 exibe_array(embaralhador(baralho))
+# puts "o tamanho do baralho embaralhado é "+embaralhador(baralho).size.to_s
