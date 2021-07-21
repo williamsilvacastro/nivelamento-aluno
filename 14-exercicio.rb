@@ -47,23 +47,28 @@ def obter_apostas(qtd, limite_inicio, limite_fim)
     apostas=[]
     x=0
     while x<qtd
-        aux=rand(limite_inicio..limite_fim)
-        if !existe_no_array(apostas, aux)
+        puts "digite em qual numero vc vai apostar"
+        aux=gets.chomp.to_i
+        if !existe_no_array(apostas, aux) &&(aux<=60&&aux>=1)
             apostas[x]=aux
             x=x+1
+        else
+            puts "numero digitado é invalido"
         end
     end
     return apostas
 end
 def verificar_acertos(sorteados, apostados)
     # implemente aqui!
-    acertados=0
+    acertados=[]
+    acertos=0
     x=0
     while x<sorteados.size
         y=0
         while y<apostados.size
             if(sorteados[x]==apostados[y])
-                acertados=acertados+1
+                acertos=acertos+1
+                acertados[acertados.size]=apostados[y]
             end
             y=y+1
         end
@@ -78,5 +83,6 @@ def mega_sena()
     puts "Numeros sorteados: #{sorteados.to_s()}"
     puts "Numeros apostados: #{apostados.to_s()}"
     puts "Acertos: #{acertados.to_s()}"
+    puts "Você acertou #{acertados.size.to_s()} numeros, parabéns"
 end
 mega_sena()
