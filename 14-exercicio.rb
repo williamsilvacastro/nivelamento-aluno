@@ -89,8 +89,7 @@ def parabenizacao(acertados)
 end
 def mega_sena()
     sorteados = sortear_numeros(6, 1, 60)
-    puts "Numeros sorteados: #{sorteados.to_s()}"
-    apostados = obter_apostas(8, 1, 60)
+    apostados = obter_apostas(6, 1, 60)
     acertados = verificar_acertos(sorteados, apostados)
     puts "Numeros sorteados: #{sorteados.to_s()}"
     puts "Numeros apostados: #{apostados.to_s()}"
