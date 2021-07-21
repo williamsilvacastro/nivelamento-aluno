@@ -29,13 +29,13 @@ def imprimir_tabela(inteiro)
         puts "ARGUMENTO INVÁLIDO"
     end
 end
-imprimir_tabela(10)
+imprimir_tabela(5)
 
 
 
 
 
-# SOLUCAO QUASE PRONTA COM RECUSIVIDADE
+# # SOLUCAO QUASE PRONTA COM RECUSIVIDADE
 # def imprimir_tabela(inteiro)
 #     if inteiro==1
 #         puts 1

@@ -12,4 +12,3 @@ def calcula_media(array)
     return soma/array.size
 end
 puts(calcula_media([1, 2, -1, 3, 0, 7]))  # deve imprimir 2.0
-puts(calcula_media([8, -15, 200, 2, -3, 10]))

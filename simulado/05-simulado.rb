@@ -5,13 +5,31 @@
 # Ex.:
 # puts(mediana([10, 0, -1, -500, 20, 100])) # deve imprimir 5.0
 # puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0
+def bolha(vetor)
+    array=[]
+    for x in (0..vetor.size-1)
+        array[x]=vetor[x]
+    end
+    for aux in (0..array.size-1)
+        for aux2 in (0..array.size-1)
+            if array[aux]<array[aux2]
+                auxiliar=array[aux]
+                array[aux]=array[aux2]
+                array[aux2]=auxiliar
+            end
+        end
+    end
+    return array
+end
 def mediana(array)
-    array_ordenado=array.sort()
+    array_ordenado=bolha(array)
     if array_ordenado.size%2==0
-        return (((array_ordenado[(array_ordenado.size/2.0)-1])+(array_ordenado[(array_ordenado.size/2.0)]))/2)
+        return (((array_ordenado[(array_ordenado.size/2.0)-1])+(array_ordenado[(array_ordenado.size/2.0)]))/2).to_f
     else
-        return array_ordenado[array_ordenado.size/2.0]
+        return array_ordenado[array_ordenado.size/2.0].to_f
     end
 end
 puts(mediana([10, 0, -1, -500, 20, 100])) # deve imprimir 5.0
 puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0
+# print bolha([10, 0, -1, -500, 20, 100])
+# puts
