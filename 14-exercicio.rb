@@ -61,20 +61,24 @@ end
 def verificar_acertos(sorteados, apostados)
     # implemente aqui!
     acertados=[]
-    acertos=0
     x=0
-    while x<sorteados.size
-        y=0
-        while y<apostados.size
-            if(sorteados[x]==apostados[y])
-                acertos=acertos+1
-                acertados[acertados.size]=apostados[y]
-            end
-            y=y+1
+    while x<apostados.size-1
+        if existe_no_array(sorteados, apostados[x])
+            acertados[acertados.size]=apostados[x]
         end
         x=x+1
     end
     return acertados
+end
+def existe_no_array(array, valor)
+    aux=0
+    while aux<array.size-1
+        if(array[aux]==valor)
+            return true
+        end
+        aux=aux+1
+    end
+    return false
 end
 def mega_sena()
     sorteados = sortear_numeros(6, 1, 60)
