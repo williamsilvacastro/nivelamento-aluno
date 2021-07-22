@@ -20,5 +20,5 @@ def multiplica_arrays(array,vetor)
 end
 
 
-puts multiplica_arrays([1, 2, 3], [10, 20, 30])
-puts multiplica_arrays([], [])
+puts multiplica_arrays([1, 2, 3], [10, 20, 30])# deve imprimir 140
+puts multiplica_arrays([1, 2, 3], [1, 2, 3, 4])==nil# deve imprimir true

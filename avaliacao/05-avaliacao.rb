@@ -29,9 +29,14 @@ def calcula_pi(termos)
 end
 
 
-puts(calcula_pi(4))
-puts(calcula_pi(5))
-puts(calcula_pi(6))
-puts(calcula_pi(7))
-puts(calcula_pi(1000))
+puts(calcula_pi(4))# deve imprimir 2.8952380952380956
+puts(calcula_pi(5))# deve imprimir 3.33968253968
+puts(calcula_pi(6))# deve imprimir 2.97604617605
+puts(calcula_pi(7))# deve imprimir 3.28373848374
+puts(calcula_pi(8))# deve imprimir 3.01707181707
+puts "----------------------------------"
+puts((Math::PI-calcula_pi(5))/-1)#quanto mais proximo de zero o numero printado, mais proximo de pi o valor retornado da funcao é,
+puts((Math::PI-calcula_pi(6)))# ou seja quanto maior o parametro passado pra funcao menor deve ser o numero
+puts((Math::PI-calcula_pi(7))/-1)#se for passado um parametro impar o valor retornado pela função será menor que pi 
+puts((Math::PI-calcula_pi(1000)))#se for passado um parametro par o valor retornado pela função será maior que pi
 

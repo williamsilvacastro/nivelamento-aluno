@@ -55,12 +55,6 @@ def calcula_media_movel(mortes_diaria, intervalo)
     return aux2
 end
 
-
-
-
-
-
-
 mortes_diaria = [
     263, 240, 266, 259, 253, 257, 261, 
     239, 274, 264, 260, 262, 261, 273, 
